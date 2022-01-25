@@ -46,10 +46,9 @@ main {
 }
 
 #movie-result-container {
-  width: 90%;
-  height: 600px;
+  width: 95%;
+  height: 550px;
   overflow-y: scroll;
-  border: 1px solid green;
 }
 
 ::-webkit-scrollbar {
