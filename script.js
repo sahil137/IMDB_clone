@@ -10,6 +10,7 @@ searchResultContainer.addEventListener("click", addToFavourites);
 searchButton.addEventListener("click", searchForMovie);
 
 // functions
+// function to search movie using omdb api
 function searchForMovie() {
   let searchText = searchTextElement.value;
   if (searchText === "") {
@@ -38,6 +39,7 @@ function searchForMovie() {
     });
 }
 
+// function to open details page
 function getMoreDetails(event) {
   if (event.target.classList.contains("details-button")) {
     let movie = event.target.parentElement.parentElement;
@@ -46,6 +48,7 @@ function getMoreDetails(event) {
   }
 }
 
+// add movies to favourites list
 function addToFavourites(event) {
   // check if user has clicked on favourite button
   // if user has not clicked on favourite button just return
