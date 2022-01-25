@@ -25,14 +25,7 @@ OMDB api used: ![OMDB API](https://www.omdbapi.com)
 
 ## Tech Used
 
-<<<<<<< HEAD
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
 - [Javascript](https://www.w3schools.com/js/)
 - [Bootstrap](https://getbootstrap.com/)
-=======
-- ![HTML](https://www.w3schools.com/html/)
-- ![CSS](https://www.w3schools.com/css/)
-- ![Javascript](https://www.w3schools.com/js/)
-- ![Bootstrap](https://getbootstrap.com/)
->>>>>>> 93f538134d84c2ebba1e87d1b1a57a8374084a03
