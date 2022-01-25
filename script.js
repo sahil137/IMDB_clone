@@ -1,12 +1,15 @@
 // Selectors
 let searchTextElement = document.getElementById("search-movie-input");
 const searchResultContainer = document.getElementById("movie-result-container");
+const searchButton = document.getElementById("search-button");
+const APIkey = "e6df134c";
 // Event Listeners
 searchTextElement.addEventListener("input", searchForMovie);
 searchResultContainer.addEventListener("click", getMoreDetails);
+searchResultContainer.addEventListener("click", addToFavourites);
+searchButton.addEventListener("click", searchForMovie);
 
 // functions
-const APIkey = "e6df134c";
 function searchForMovie() {
   let searchText = searchTextElement.value;
   if (searchText === "") {
@@ -41,4 +44,29 @@ function getMoreDetails(event) {
     const id = movie.id;
     window.open("./details.html" + "?id=" + id);
   }
+}
+
+function addToFavourites(event) {
+  // check if user has clicked on favourite button
+  // if user has not clicked on favourite button just return
+  if (!event.target.classList.contains("favourite-button")) {
+    return;
+  }
+
+  let movieId = event.target.parentElement.id;
+  let favouriteMovies;
+
+  if (localStorage.getItem("favourites") === null) {
+    favouriteMovies = [];
+  } else {
+    favouriteMovies = JSON.parse(localStorage.getItem("favourites"));
+  }
+  // check if the movieId is already present
+  if (favouriteMovies.indexOf(movieId) !== -1) {
+    alert("Already in favourites");
+    return;
+  }
+  // add id to array and save it back to local storage
+  favouriteMovies.push(movieId);
+  localStorage.setItem("favourites", JSON.stringify(favouriteMovies));
 }
