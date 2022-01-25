@@ -16,7 +16,7 @@ function searchForMovie() {
   if (searchText === "") {
     return;
   }
-  fetch(`http://www.omdbapi.com/?s=${searchText}&apikey=${APIkey}&page=1`)
+  fetch(`https://www.omdbapi.com/?s=${searchText}&apikey=${APIkey}&page=1`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

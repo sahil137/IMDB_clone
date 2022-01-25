@@ -20,7 +20,7 @@ function getFavouriteMeals() {
   let content = "";
   // loop over each meal ID and fetch for movies
   favouriteMovieId.forEach((movieId) => {
-    fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
+    fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
       .then((response) => response.json())
       .then((data) => addfavouriteMovies(data, content));
   });

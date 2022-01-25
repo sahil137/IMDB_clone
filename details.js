@@ -4,7 +4,7 @@ const APIkey = "e6df134c";
 
 const container = document.getElementById("main-container");
 
-window.onload = fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
+window.onload = fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
   .then((response) => response.json())
   .then((data) => displayDetails(data));
 
