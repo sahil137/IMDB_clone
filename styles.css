@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  color: white;
+  min-height: 10vh;
+  padding-left: 44%;
+  padding-right: 20%;
+}
+
+#title {
+  font-size: 1.7rem;
+}
+
+#favorite-link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+#favorite-link:hover {
+  color: aquamarine;
+}
+
+/* main styles */
+
+main {
+  height: 90vh;
+  width: 100%;
+}
+
+.search-container {
+  margin-top: 2%;
+}
+
+#search-button {
+  margin-bottom: 3px;
+}
+
+#search-movie-input {
+  padding: 5px;
+}
+
+#movie-result-container {
+  width: 90%;
+  height: 500px;
+  overflow-y: scroll;
+  border: 1px solid green;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
